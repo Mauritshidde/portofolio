@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style/css/main.css" />
+    <!-- <link rel="stylesheet" href="{{ url_for('style', filename='css/main.css') }}"> -->
+    <!-- <link rel="shortcut icon" type="image/png" href="{{ url_for('style', filename='images/favicon-32x32.png') }}"> -->
+
+    <title>Portofolio Website</title>
+</head>
+<body>
+    <div id="nav_bar">
+        <p id="nav_bar_name">Maurits Diepeveen</p>
+        
+        <div id="nav_bar_right">
+            <a href="#section1" class="menu">
+                <div class="nav_bar_button">
+                    <p>home</p>
+                </div>
+            </a>
+
+            <a href="#section2" class="menu">
+                <div class="nav_bar_button">
+                    <p>Over mij</p>
+                </div>
+            </a>
+            
+            <a href="#section3" class="menu">
+                <div class="nav_bar_button">
+                    <p>Projecten</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <section class="start_page" id="section1">
+        <img class="start_page_image" src="style/images/PWS.png" alt="place holder">
+    </section>
+
+    <section class="about_me" id="section2">
+        <div class="tekst_div">
+            <h1>About me</h1>
+            <p>
+                I'm Maurits Diepeveen, I'm 17 years old, my hobby's are programming, gaming, golf, tennis and skiing. <br>
+                I have programmed in alot of programming languages most of these are: C++, Cuda, R, Rust, Lisp, Perl, Haskell, js, python and c#
+                Cuda doesn't really count, because it's just c++ with some added functions to use gpu's. I liked some of the progrmming languages i have used more than others, my favourites are; c++ and python, and my least favourites are: javascript, Lisp, R and Haskell. 
+            </p>
+        </div>
+    </section>
+
+    <section class="projecten" id="section3">
+        <div class="tekst_div">
+            <h1>My projects</h1>
+            <p>
+                I have had to do multiple projects for school, I really liked doing these projects. 
+                Most projects were made within half a year.
+                My favourite projects were my PWS-project and the planner website. 
+                I really enjoyed making the PWS-project, because i found the subject very interesting and I like combining physics with programming.
+                What i enjoyed about making the planner website are that I could use the skills of making an web app using python which I learned around half a year earlier and that the website is used by myself, 
+                and most of the students in my school.
+                The list of projects will hopefully keep growing. <br> 
+                The projects are sorted from top to bottom by the date that i started working on the project.
+            </p>
+
+            <div class="project_cubes">
+                <div class="project_cube">
+                    <img class="project_image" src="style/images/PWS.png" alt="github logo">
+                    <h2 class="project_title">PWS airplane simulation and cfd-solver</h2>
+                    
+                    <p class="project_text">
+                        For my PWS (a big project that you have to do in pairs of 2, and have to spend 80 hours each) I made an airplane simulator and fluid dynamic simulation. We didn't manage to finish the complete project before the deadline and still have thiongs we want to add.  <br>
+                        We used the programming language c++, we also made a makefile which compiles the code to an executable. We used an code architecture in which we placed declarations in an .h file and the actual code in .cpp files. We didn't have the time to check if the cfd-solver gives accuate results, 
+                        this was partially caused by the execution time opf the cfd-solver. 
+                        I decreased the execution time by more than 1000% by using cuda, but even this was not fast enough. To make the code run with cuda I had to rewrite the code we made before so all the steps were executed parallel top each other.
+                    </p>
+                    
+                    <a href="https://github.com/Mauritshidde/PWS-vliegtuig-simulatie" class="github">
+                        <img class="logo" src="style/images/github.png" alt="">
+                    </a>
+                    <p class="date">11-09-2024</p>
+                </div>
+                
+                <div class="project_cube">
+                    <img class="project_image" src="style/images/AI.png" alt="">
+                    <h2 class="project_title">AI learns to drive</h2>
+                    <p class="project_text">
+                        For this project I made an progam in which a car learns itself to drive.
+                        I used the programming language c++ and made an makefile to compile the code.
+                        The file structure used in the program and the way the makefile are used aren't good.
+                        I created the code for 2 types of ai: neuralnetworks and Qtables. 
+                        I made 2 different update algorithms for the AI that uses neuralnetworks, these update algorithms are: genetic and backpropagation.
+                        The genetic AI works good, but the AI using backpropagation doesn't mlearn correctly, 
+                        because I couldn't create an good learning algorithm.
+                        The program works, but there are probably some small errors that can occur.
+                    </p>
+                    
+                    <a href="https://github.com/Mauritshidde/AI-learns-to-drive" class="github">
+                        <img class="logo" src="style/images/github.png" alt="">
+                    </a>
+                    <p class="date">08-11-2022</p>
+                </div>
+
+                <div class="project_cube">
+                    <img class="project_image" src="style/images/cpp.png" alt="github logo">
+                    <h2 class="project_title">C++ course VU</h2>
+                    
+                    <p class="project_text">
+                        I followed a c++ course by the VU.      
+                    </p>
+
+                    <p class="date">10-10-2021</p>
+                </div>
+
+                <div class="project_cube">
+                    <img class="project_image" src="style/images/planner.png" alt="github logo">
+                    <h2 class="project_title">Planner website</h2>
+                    
+                    <p class="project_text">
+                        I was asked by a teacher to make a web version of an Excel document which we used to see what we have to do every week.
+                        To make this website I used the programming language python and used the library's: flask, mysql, pandas, microsoftoffice and some others.
+                        The website works by dowloading the planner Excel file from sharepoint and reading the Excel file using pandas, after this it puts all the values in a database.
+                        The website retrieves it's data from the database and displays it in tables.
+                        After I made the website I set up the hosting of the website on Digitalocean.
+                        The website is currently in official use by my school, and is preferred by most students to the Excel file.    
+                    </p>
+                    
+                    <a href="https://github.com/Mauritshidde/portofolio_website1" class="github">
+                        <img class="logo" src="style/images/github.png" alt="">
+                    </a>
+                    <a href="https://planner.hetmml.nl/">
+                        <img class="logo" src="style/images/metis.png" alt="metis logo">
+                    </a>
+
+                    <p class="date">20-06-2021</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="footer">
+        <p id="made_by">
+            Made by: Maurits Diepeveen
+        </p>
+
+        <!-- <div class="footer_items">
+            <a href="https://github.com/Mauritshidde" class="github">
+                <img class="footer_logo" src="style/images/github.png" alt="">
+            </a>
+        </div> -->
+    </div>
+</body>
+</html>
